@@ -101,7 +101,7 @@ lazy val streamKinesis = project
   .in(file("modules/stream/kinesis"))
   .settings(allStreamSettings)
   .settings(moduleName := "snowplow-stream-enrich-kinesis")
-  .settings(Docker / packageName := "snowplow/stream-enrich-kinesis")
+  .settings(Docker / packageName := "CapChrisCap/stream-enrich-kinesis")
   .settings(libraryDependencies ++= Seq(
     Dependencies.Libraries.kinesisClient,
     Dependencies.Libraries.kinesisSdk,
@@ -116,7 +116,7 @@ lazy val streamKafka = project
   .settings(moduleName := "snowplow-stream-enrich-kafka")
   .settings(allStreamSettings)
   .settings(
-    Docker / packageName := "snowplow/stream-enrich-kafka",
+    Docker / packageName := "CapChrisCap/stream-enrich-kafka",
   )
   .settings(libraryDependencies ++= Seq(
     Dependencies.Libraries.kafkaClients
@@ -129,7 +129,7 @@ lazy val streamNsq = project
   .settings(moduleName := "snowplow-stream-enrich-nsq")
   .settings(allStreamSettings)
   .settings(
-    Docker / packageName := "snowplow/stream-enrich-nsq",
+    Docker / packageName := "CapChrisCap/stream-enrich-nsq",
   )
   .settings(libraryDependencies ++= Seq(
     Dependencies.Libraries.log4j,
